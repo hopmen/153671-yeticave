@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Алексей Бабыкин](https://up.htmlacademy.ru/php/7/user/153671).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Куприянов](https://htmlacademy.ru/profile/id541075).
 
 ---
 
