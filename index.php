@@ -37,7 +37,7 @@ $list_lots = [
         'img' => 'img/lot-6.jpg',
     ],
 
-]
+];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
