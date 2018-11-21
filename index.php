@@ -38,6 +38,16 @@ $list_lots = [
     ],
 
 ];
+function get_format_price($number){
+    $number = ceil($number);
+	if($number < 1000 && $number >= 0){
+		return $number + '₽';
+	} else if($number >= 1000){
+        return number_format($number, 0, '', ' ') . '₽';
+	}else{
+		return 'Отрицательное число';
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -116,7 +126,7 @@ $list_lots = [
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount"><?= $item['price']; ?></span>
-                            <span class="lot__cost"><?= $item['price']; ?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?= get_format_price($item['price']); ?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
