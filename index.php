@@ -40,13 +40,7 @@ $list_lots = [
 ];
 function get_format_price($number){
     $number = ceil($number);
-	if($number < 1000 && $number >= 0){
-		return $number + '₽';
-	} else if($number >= 1000){
-        return number_format($number, 0, '', ' ') . '₽';
-	}else{
-		return 'Отрицательное число';
-	}
+    return number_format($number,0,null, ' ') . '<b class="rub">р</b>';
 }
 ?>
 <!DOCTYPE html>
