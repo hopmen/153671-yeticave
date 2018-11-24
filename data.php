@@ -6,6 +6,7 @@
  * Time: 22:02
  * @var integer $is_auth значение аутентификации
  */
+date_default_timezone_set("Europe/Moscow");
 $is_auth = rand(0, 1); // значение аутентификации
 $user_name = 'Вася'; // укажите здесь ваше имя
 $user_avatar = 'img/user.jpg';
