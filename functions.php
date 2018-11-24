@@ -36,3 +36,14 @@ function get_format_price($number){
     $number = ceil($number);
     return number_format($number,0,null, ' ') . ' <b class="rub">р</b>';
 }
+
+/**
+ * Функция для вычисления часов и минут до полуночи
+ * @return string - итоговая строка в формате часы:минуты
+ */
+function get_time_before_midnight() {
+    $midnight = strtotime('tomorrow midnight');
+    $before_midnight_hours = strval(floor(($midnight - time()) / 3600));
+    $before_midnight_minutes = strval(floor((($midnight - time()) % 3600) / 60));
+    return $before_midnight_hours . ':' . $before_midnight_minutes;
+}
