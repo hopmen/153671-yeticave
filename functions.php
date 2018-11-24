@@ -38,8 +38,8 @@ function get_format_price($number){
 }
 
 /**
- * Функция для вычисления часов и минут до полуночи
- * @return string - итоговая строка в формате часы:минуты
+ * получить время отсавшее время до 00:00
+ * @return string  время в формате часы:минуты
  */
 function get_time_before_midnight() {
     $midnight = strtotime('tomorrow midnight');
