@@ -4,7 +4,7 @@
  * User: Hopman
  * Date: 23.11.2018
  * Time: 22:02
- * @var integer $is_auth значение аутентификации
+ * @var integer $category_list значение аутентификации
  */
 date_default_timezone_set("Europe/Moscow");
 $is_auth = rand(0, 1); // значение аутентификации
