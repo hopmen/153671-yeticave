@@ -15,9 +15,9 @@ CREATE TABLE lots (
   description TEXT,
   img_path CHAR(128),
   price INT UNSIGNED,
-  bet_step INT UNSIGNED,
-  start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  end_date TIMESTAMP,
+  bets_step INT UNSIGNED,
+  start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  end_time TIMESTAMP,
   author_id INT UNSIGNED,
   winner_id INT UNSIGNED
 );
