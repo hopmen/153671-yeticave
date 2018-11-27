@@ -1,0 +1,40 @@
+CREATE DATABASE data_db
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+USE data_db;
+
+CREATE TABLE categories (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name CHAR(128)
+);
+
+CREATE TABLE lots (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title CHAR(128),
+  category_id INT UNSIGNED,
+  description TEXT,
+  img_path CHAR(128),
+  price INT UNSIGNED,
+  bet_step INT UNSIGNED,
+  start_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  end_date TIMESTAMP,
+  author_id INT UNSIGNED,
+  winner_id INT UNSIGNED
+);
+
+CREATE TABLE bets (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  price INT UNSIGNED,
+  author_id INT UNSIGNED,
+  lot_id INT UNSIGNED
+);
+
+CREATE TABLE users (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  email CHAR(128) NOT NULL UNIQUE,
+  name CHAR(128),
+  password CHAR(128),
+  avatar_path CHAR(128),
+  contact_info CHAR(255)
+);
